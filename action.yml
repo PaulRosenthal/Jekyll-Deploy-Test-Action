@@ -16,3 +16,6 @@ runs:
   args:
     - ${{ inputs.gemfile-location }}
     - ${{ inputs.site-directory }}
+branding:
+  icon: 'bell'  
+  color: 'blue'
