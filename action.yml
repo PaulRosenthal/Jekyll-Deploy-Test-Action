@@ -1,0 +1,18 @@
+# action.yml
+name: 'Jekyll Deploy Test'
+description: 'This action validates whether a Jekyll website deploys successfully.'
+inputs:
+  gemfile-location:
+    description: 'This variable stores the location of the Ruby gemfile in the repository. By default, this is the root of the repository.'
+    required: false
+    default: ''
+  site-directory:
+    description: 'This variable stores the location of the Jekyll website in the repository. By default, this is the root of the repository.'
+    required: false
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.gemfile-location }}
+    - ${{ inputs.site-directory }}
