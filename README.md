@@ -1,5 +1,7 @@
 # Jekyll Deploy Test GitHub Action
 
+[![Automated Validation](https://github.com/PaulRosenthal/Jekyll-Deploy-Test-Action/actions/workflows/automated-validation.yml/badge.svg?branch=main)](https://github.com/PaulRosenthal/Jekyll-Deploy-Test-Action/actions/workflows/automated-validation.yml)
+
 This GitHub action validates whether a Jekyll website contains the necessary configuration to successfully build. It is intended to be used in a continuous integration (CI) pipeline or as part of a testing process.
 
 ## Inputs
