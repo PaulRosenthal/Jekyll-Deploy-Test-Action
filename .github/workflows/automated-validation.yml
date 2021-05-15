@@ -1,3 +1,5 @@
+name: Automated Validation
+
 on: [push]
 
 jobs:
