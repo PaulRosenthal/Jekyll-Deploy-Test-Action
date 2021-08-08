@@ -20,7 +20,7 @@ The action outputs a value of "0" if the website builds correctly, and outputs a
 
 ## How to Use
 
-The [.github/workflows/main.yml](.github/workflows/main.yml) file in this repository contains an example workflow that executes this action. Additionally, below are two examples for incorporating this action into an existing workflow:
+The [.github/workflows/main.yml](.github/workflows/automated-validation.yml) file in this repository contains an example workflow that executes this action. Additionally, below are two examples for incorporating this action into an existing workflow:
 
 ### Example With Variables
 
