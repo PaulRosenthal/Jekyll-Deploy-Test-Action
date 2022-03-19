@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM ubuntu:latest
+FROM ubuntu:20.04
 
 COPY validate-jekyll-deploy.sh /validate-jekyll-deploy.sh
 RUN apt -y update && apt -y install sudo ruby-full build-essential zlib1g-dev
