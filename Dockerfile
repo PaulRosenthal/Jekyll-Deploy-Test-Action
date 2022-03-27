@@ -1,4 +1,3 @@
-# Container image that runs your code
 FROM ubuntu:rolling
 
 COPY validate-jekyll-deploy.sh /validate-jekyll-deploy.sh
