@@ -14,3 +14,8 @@ jobs:
       with:
         gemfile-location: '/sample-jekyll-website'
         site-directory: '/sample-jekyll-website'
+    - name: Upload _site Directory From Test Build
+      uses: actions/upload-artifact@v2
+      with:
+        name: test_build
+        path: _site

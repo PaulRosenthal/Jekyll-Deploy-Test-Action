@@ -25,14 +25,30 @@ The [.github/workflows/automated-validation.yml](.github/workflows/automated-val
 ### Example With Variables
 
 ```
-uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v1
-with:
-  gemfile-location: '/sample-jekyll-website'
-  site-directory: '/sample-jekyll-website'
+- uses: PaulRosenthal/Jekyll-Deploy-Test-Action@main
+  with:
+    gemfile-location: '/sample-jekyll-website'
+    site-directory: '/sample-jekyll-website'
 ```
 
 ### Example Without Variables
 
 ```
-uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v1
+- uses: PaulRosenthal/Jekyll-Deploy-Test-Action@main
+```
+
+### Example With Variables and Archiving Test Build
+
+The test build files can be archived each time a workflow is executed, and downloaded for review or further verification.
+
+In the example below, files from the test build will be saved in a zip file titled *test_build*:
+```
+- uses: PaulRosenthal/Jekyll-Deploy-Test-Action@main
+  with:
+    gemfile-location: '/sample-jekyll-website'
+    site-directory: '/sample-jekyll-website'
+- uses: actions/upload-artifact@v2
+  with:
+    name: test_build
+    path: _site
 ```
