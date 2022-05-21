@@ -50,5 +50,5 @@ In the example below, files from the test build will be saved in a zip file titl
 - uses: actions/upload-artifact@v2
   with:
     name: test_build
-    path: _site
+    path: /sample-jekyll-website/_site
 ```
