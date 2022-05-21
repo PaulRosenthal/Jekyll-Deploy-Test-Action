@@ -8,7 +8,7 @@ jobs:
     name: This job tests the functionality of the Jekyll Deploy Test Action.
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@3
+      uses: actions/checkout@v3
     - name: Jekyll Deploy Test
       uses: PaulRosenthal/Jekyll-Deploy-Test-Action@May-2022-Updates
       with:

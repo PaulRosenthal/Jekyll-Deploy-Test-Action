@@ -26,7 +26,7 @@ The [.github/workflows/automated-validation.yml](.github/workflows/automated-val
 
 ```
 - name: Checkout Repository
-  uses: actions/checkout@3
+  uses: actions/checkout@v3
 - uses: PaulRosenthal/Jekyll-Deploy-Test-Action@main
   with:
     gemfile-location: '/sample-jekyll-website'
@@ -37,7 +37,7 @@ The [.github/workflows/automated-validation.yml](.github/workflows/automated-val
 
 ```
 - name: Checkout Repository
-  uses: actions/checkout@3
+  uses: actions/checkout@v3
 - uses: PaulRosenthal/Jekyll-Deploy-Test-Action@main
 ```
 
@@ -48,7 +48,7 @@ The test build files can be archived each time a workflow is executed, and downl
 In the example below, files from the test build will be saved in a zip file titled *test_build*:
 ```
 - name: Checkout Repository
-  uses: actions/checkout@3
+  uses: actions/checkout@v3
 - uses: PaulRosenthal/Jekyll-Deploy-Test-Action@main
   with:
     gemfile-location: '/sample-jekyll-website'
