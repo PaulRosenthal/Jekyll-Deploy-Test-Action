@@ -10,7 +10,8 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
     - name: Jekyll Deploy Test
-      uses: PaulRosenthal/Jekyll-Deploy-Test-Action@May-2022-Updates
+      # This step uses source code from the branch executing the workflow.
+      uses: PaulRosenthal/Jekyll-Deploy-Test-Action@${GITHUB_REF##*/}
       with:
         gemfile-location: '/sample-jekyll-website'
         site-directory: '/sample-jekyll-website'

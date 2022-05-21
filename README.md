@@ -27,7 +27,7 @@ The [.github/workflows/automated-validation.yml](.github/workflows/automated-val
 ```
 - name: Checkout Repository
   uses: actions/checkout@v3
-- uses: PaulRosenthal/Jekyll-Deploy-Test-Action@main
+- uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v2
   with:
     gemfile-location: '/sample-jekyll-website'
     site-directory: '/sample-jekyll-website'
@@ -38,7 +38,7 @@ The [.github/workflows/automated-validation.yml](.github/workflows/automated-val
 ```
 - name: Checkout Repository
   uses: actions/checkout@v3
-- uses: PaulRosenthal/Jekyll-Deploy-Test-Action@main
+- uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v2
 ```
 
 ### Example With Variables and Archiving Test Build
@@ -49,7 +49,7 @@ In the example below, files from the test build will be saved in a zip file titl
 ```
 - name: Checkout Repository
   uses: actions/checkout@v3
-- uses: PaulRosenthal/Jekyll-Deploy-Test-Action@main
+- uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v2
   with:
     gemfile-location: '/sample-jekyll-website'
     site-directory: '/sample-jekyll-website'

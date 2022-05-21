@@ -9,8 +9,6 @@ sudo bundle install
 cd /github/workspace/$2 && echo "Changed directory to `pwd`"
 if jekyll build --verbose ; then
   echo "The test build completed successfully."
-  echo "Present working directory: " && pwd
-  echo "List of files/folders: " && ls
   exit 0
 else
   echo "The test build failed."
