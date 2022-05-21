@@ -25,14 +25,37 @@ The [.github/workflows/automated-validation.yml](.github/workflows/automated-val
 ### Example With Variables
 
 ```
-uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v1
-with:
-  gemfile-location: '/sample-jekyll-website'
-  site-directory: '/sample-jekyll-website'
+- name: Checkout Repository
+  uses: actions/checkout@v3
+- uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v2
+  with:
+    gemfile-location: '/sample-jekyll-website'
+    site-directory: '/sample-jekyll-website'
 ```
 
 ### Example Without Variables
 
 ```
-uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v1
+- name: Checkout Repository
+  uses: actions/checkout@v3
+- uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v2
 ```
+
+### Example With Variables and Archiving Test Build
+
+The test build files can be archived each time a workflow is executed, and downloaded for review or further verification.
+
+In the example below, files from the test build will be saved in a zip file titled *test_build*:
+```
+- name: Checkout Repository
+  uses: actions/checkout@v3
+- uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v2
+  with:
+    gemfile-location: '/sample-jekyll-website'
+    site-directory: '/sample-jekyll-website'
+- uses: actions/upload-artifact@v3.1.0
+  with:
+    name: test_build
+    path: /github/workspace/sample-jekyll-website/_site
+```
+Please take note of the `/github/workspace/sample-jekyll-website/_site` path used in the step uploading the test build files. `/github/workspace` is the directory that GitHub actions are executed in. The Jekyll Deploy Test Action automatically prepends this directory to the `site-directory` input.
