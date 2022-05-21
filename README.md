@@ -50,5 +50,6 @@ In the example below, files from the test build will be saved in a zip file titl
 - uses: actions/upload-artifact@v2
   with:
     name: test_build
-    path: /sample-jekyll-website/_site
+    path: /github/workspace/sample-jekyll-website/_site
 ```
+Please take note of the `/github/workspace/sample-jekyll-website/_site` path used in the step uploading the test build files. `/github/workspace` is the directory that GitHub actions are executed in. The Jekyll Deploy Test Action automatically prepends this directory to the `site-directory` input.
