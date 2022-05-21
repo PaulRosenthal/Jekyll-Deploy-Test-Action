@@ -1,6 +1,5 @@
 ---
-layout: page
-title: Test Page
+title: Test Jekyll Website Home Page
 ---
 
 # Test Jekyll Website
