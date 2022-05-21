@@ -7,15 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     name: This job tests the functionality of the Jekyll Deploy Test Action.
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3.1.0
+    - name: Checkout Repository
+      uses: actions/checkout@3
     - name: Jekyll Deploy Test
       uses: PaulRosenthal/Jekyll-Deploy-Test-Action@May-2022-Updates
       with:
         gemfile-location: '/sample-jekyll-website'
         site-directory: '/sample-jekyll-website'
     - name: Upload _site Directory From Test Build
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3.1.0
       with:
         name: test_build
         path: sample-jekyll-website/_site
