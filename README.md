@@ -47,7 +47,7 @@ In the example below, files from the test build will be saved in a zip file titl
   with:
     gemfile-location: '/sample-jekyll-website'
     site-directory: '/sample-jekyll-website'
-- uses: actions/upload-artifact@v2
+- uses: actions/upload-artifact@v3.1.0
   with:
     name: test_build
     path: /github/workspace/sample-jekyll-website/_site
