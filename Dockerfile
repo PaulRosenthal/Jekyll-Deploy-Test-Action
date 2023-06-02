@@ -1,4 +1,4 @@
-FROM ubuntu:rolling
+FROM ubuntu:23.04
 
 COPY validate-jekyll-deploy.sh /validate-jekyll-deploy.sh
 RUN apt -y update && apt -y install sudo ruby-full build-essential zlib1g-dev
