@@ -1,4 +1,4 @@
-FROM ruby:latest
+FROM ruby:4.0.1-trixie
 
 COPY validate-jekyll-deploy.sh /validate-jekyll-deploy.sh
 RUN apt -y update && apt -y install sudo ruby-full build-essential zlib1g-dev
